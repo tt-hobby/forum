@@ -20,8 +20,7 @@
 		</header>
 		
 		<main class="main">
-			<h1 class="main__heading">Welcome to the FORUM.</h1>
-			<p class="main__paragraph">Start your conversation now.</p>
+			<div class="message--success">We have successfully created your account!</div>
 		</main>
 		
 		<%@ include file="./common/footer.jsp" %>
