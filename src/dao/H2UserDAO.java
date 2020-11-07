@@ -30,6 +30,7 @@ public class H2UserDAO implements UserDAO {
 			connection.close();
 			return new UserBean(resultUserId, resultPassword, resultTimeStamp);
 		} else {
+			connection.close();
 			return null;
 		}
 	}

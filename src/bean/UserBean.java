@@ -30,4 +30,8 @@ public class UserBean {
 		return timeStamp;
 	}
 	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 }

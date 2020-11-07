@@ -10,6 +10,24 @@ import error.IdUnavailableException;
 
 public class UserLogic {
 	
+	public UserBean authenticate(String userId, String password) throws SQLException {
+		UserDAO userDao = new H2UserDAO();
+		UserBean user = userDao.selectById(userId);
+		
+		if (user != null) {
+			if (userId.equals(user.getUserId()) && password.equals(user.getPassword())) {
+				StringBuilder hiddenPassword = new StringBuilder();
+				for (int i = 0; i < user.getPassword().length(); i++) {
+					hiddenPassword.append("*");
+				}
+				user.setPassword(hiddenPassword.toString());
+				return user;
+			}
+		}
+		
+		return null;
+	}
+	
 	public void subscribe(String userId, String password) throws IdUnavailableException, SQLException {
 		UserDAO userDao = new H2UserDAO();
 		
