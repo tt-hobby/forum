@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.main {
+	margin: 0 auto;
+	width: 90vw;
+}
+
+.main__paragraph {
+	margin-top: 1.2rem;
+	font-weight: bold;
+}

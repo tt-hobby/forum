@@ -11,7 +11,10 @@
 <meta charset="UTF-8">
 <title>FORUM | Top</title>
 <!-- css -->
-<link rel="stylesheet" href="/forum/css/master.css">
+<link rel="stylesheet" href="/forum/css/common/master.css">
+<link rel="stylesheet" href="/forum/css/common/navUnauthorized.css">
+<link rel="stylesheet" href="/forum/css/common/footer.css">
+<link rel="stylesheet" href="/forum/css/signUpSuccessPage.css">
 </head>
 <body>
 	<div class="container">
@@ -20,7 +23,7 @@
 		</header>
 		
 		<main class="main">
-			<div class="message--success">We have successfully created your account!</div>
+			<p class="main__paragraph">We have successfully created your account!</p>
 		</main>
 		
 		<%@ include file="./common/footer.jsp" %>

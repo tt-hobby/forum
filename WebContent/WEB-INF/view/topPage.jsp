@@ -14,7 +14,10 @@
 <meta charset="UTF-8">
 <title>FORUM | Top</title>
 <!-- css -->
-<link rel="stylesheet" href="/forum/css/master.css">
+<link rel="stylesheet" href="/forum/css/common/master.css">
+<link rel="stylesheet" href="/forum/css/common/navUnauthorized.css">
+<link rel="stylesheet" href="/forum/css/common/footer.css">
+<link rel="stylesheet" href="/forum/css/topPage.css">
 </head>
 <body>
 	<div class="container">

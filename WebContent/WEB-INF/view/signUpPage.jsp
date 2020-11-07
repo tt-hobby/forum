@@ -14,7 +14,10 @@
 <meta charset="UTF-8">
 <title>FORUM | Sign up</title>
 <!-- css -->
-<link rel="stylesheet" href="/forum/css/master.css">
+<link rel="stylesheet" href="/forum/css/common/master.css">
+<link rel="stylesheet" href="/forum/css/common/navUnauthorized.css">
+<link rel="stylesheet" href="/forum/css/common/footer.css">
+<link rel="stylesheet" href="/forum/css/signUpPage.css">
 </head>
 <body>
 	<div class="container">
@@ -24,8 +27,12 @@
 		
 		<main class="main">
 			<c:if test="${ not empty requestScope.err }">
-				<div class="message--error"><c:out value="${ requestScope.err }" /></div>
+				<div class="message--error">
+					<span><c:out value="${ requestScope.err }" /></span>
+				</div>
 			</c:if>
+			
+			<h1 class="heading">Sign up</h1>
 			
 			<form class="form" action="/forum/signUp" method="POST">
 				<div class="form__section">

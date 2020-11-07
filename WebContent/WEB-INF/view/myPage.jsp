@@ -14,7 +14,10 @@
 <meta charset="UTF-8">
 <title>FORUM | My page</title>
 <!-- css -->
-<link rel="stylesheet" href="/forum/css/master.css">
+<link rel="stylesheet" href="/forum/css/common/master.css">
+<link rel="stylesheet" href="/forum/css/common/navAuthorized.css">
+<link rel="stylesheet" href="/forum/css/common/footer.css">
+<link rel="stylesheet" href="/forum/css/myPage.css">
 </head>
 <body>
 	<div class="container">
@@ -28,13 +31,26 @@
 					<span><c:out value="${ requestScope.err }" /></span>
 				</div>
 			</c:if>
-		
-			<p class="main__paragraph">User ID: <c:out value="${ sessionScope.user.getUserId() }" /></p>
-			<p class="main__paragraph">Password: <c:out value="${ sessionScope.user.getPassword() }" /></p>
-			<p class="main__paragraph">Time Stamp: <c:out value="${ sessionScope.user.getTimeStamp() }" /></p>
 			
-			<form class="form" action="/forum/my" method="POST">
-				<button class="form__button--danger" type="submit">Unsubscribe</button>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td class="table-data">User ID</td>
+						<td class="table-data"><c:out value="${ sessionScope.user.getUserId() }" /></td>
+					</tr>
+					<tr>
+						<td class="table-data">Password</td>
+						<td class="table-data"><c:out value="${ sessionScope.user.getPassword() }" /></td>
+					</tr>
+					<tr>
+						<td class="table-data">Time Stamp</td>
+						<td class="table-data"><c:out value="${ sessionScope.user.getTimeStamp() }" /></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<form class="button-only-form" action="/forum/my" method="POST">
+				<button class="button-only-form__button--danger" type="submit">Unsubscribe</button>
 			</form>
 		</main>
 		

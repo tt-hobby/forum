@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.main {
+	margin: 0 auto;
+	width: 90vw;
+}
+
+.main__heading {
+	margin-top: 16rem;
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.main {
+	margin: 0 auto;
+	width: 90vw;
+}
+
+.form__textarea {
+	height: 3.2rem;
+	width: 100%;
+	padding: 4px;
+}
+
+.form__button {
+	margin-top: 0;
+}
+
+.forum {
+	margin-top: 1.2rem;
+}
+
+.dummy-post__paragraph {
+	font-weight: bold;
+}
+
+.post {
+	margin-bottom: 0.4rem;
+}
+
+.post__information {
+	font-size: 0.4rem;
+}
+
+.post__content {
+	padding-left: 8px;
+}
