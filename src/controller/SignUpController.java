@@ -58,7 +58,6 @@ public class SignUpController extends HttpServlet {
 			request.setAttribute("err", "Database error. Please try again.");
 			reqDispatcher = request.getRequestDispatcher("/WEB-INF/view/signUpPage.jsp");
 			reqDispatcher.forward(request, response);
-			err.printStackTrace();
 		}
 	}
 

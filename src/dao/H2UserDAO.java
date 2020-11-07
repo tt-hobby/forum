@@ -39,7 +39,7 @@ public class H2UserDAO implements UserDAO {
 	public void insert(UserBean user) throws SQLException {
 		Connection connection = this.createConnection();
 
-		String sql = String.format("INSERT INTO USERS VALUES ('%s', '%s', '%s');", user.getUserId(), user.getPassword(), user.getTimeStamp());
+		String sql = String.format("INSERT INTO %s VALUES ('%s', '%s', '%s');", TABLE_NAME, user.getUserId(), user.getPassword(), user.getTimeStamp());
 		PreparedStatement statement = connection.prepareStatement(sql);
 		statement.executeUpdate();
 		connection.close();

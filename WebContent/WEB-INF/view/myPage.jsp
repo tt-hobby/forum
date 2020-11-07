@@ -23,6 +23,12 @@
 		</header>
 		
 		<main class="main">
+			<c:if test="${ not empty requestScope.err }">
+				<div class="message--error">
+					<span><c:out value="${ requestScope.err }" /></span>
+				</div>
+			</c:if>
+		
 			<p class="main__paragraph">User ID: <c:out value="${ sessionScope.user.getUserId() }" /></p>
 			<p class="main__paragraph">Password: <c:out value="${ sessionScope.user.getPassword() }" /></p>
 			<p class="main__paragraph">Time Stamp: <c:out value="${ sessionScope.user.getTimeStamp() }" /></p>
