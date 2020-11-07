@@ -7,6 +7,7 @@ import bean.UserBean;
 import dao.H2UserDAO;
 import dao.UserDAO;
 import error.IdUnavailableException;
+import error.UserUnfoundException;
 
 public class UserLogic {
 	
@@ -36,6 +37,16 @@ public class UserLogic {
 		}
 		
 		userDao.insert(new UserBean(userId, password, new Date().toString()));
+	}
+	
+	public void unsubscribe(UserBean user) throws UserUnfoundException, SQLException {
+		UserDAO userDao = new H2UserDAO();
+		
+		if (userDao.selectById(user.getUserId()) == null) {
+			throw new UserUnfoundException();
+		}
+		
+		userDao.deleteById(user.getUserId());
 	}
 
 }
