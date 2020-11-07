@@ -10,9 +10,9 @@ import bean.UserBean;
 
 public class H2UserDAO implements UserDAO {
 	
-	private final String URL = "jdbc:h2:tcp://localhost/~/h2db/forum";
-	private final String USER_NAME = "sa";
-	private final String PASSWORD = "1234";
+	private final String URL = ""/* url of database */;
+	private final String USER_NAME = ""/* username of database */;
+	private final String PASSWORD = ""/* password of database */;
 	private final String TABLE_NAME = "USERS";
 	
 	@Override
